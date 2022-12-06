@@ -1,12 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import {
-  StyleSheet, Text, View, StatusBar,
-} from 'react-native'
+import * as reactNative from 'react-native'
 import Button from 'components/Button'
 import { colors } from 'theme'
 
-const styles = StyleSheet.create({
+const styles = reactNative.StyleSheet.create({
   root: {
     flex: 1,
     flexDirection: 'column',
@@ -21,9 +19,9 @@ const styles = StyleSheet.create({
 })
 
 const Home = ({ navigation }) => (
-  <View style={styles.root}>
-    <StatusBar barStyle="light-content" />
-    <Text style={styles.title}>Home</Text>
+  <reactNative.View style={styles.root}>
+    <reactNative.StatusBar barStyle="light-content" />
+    <reactNative.Text style={styles.title}>Homepage</reactNative.Text>
     <Button
       title="Go to Details"
       color="white"
@@ -32,7 +30,7 @@ const Home = ({ navigation }) => (
         navigation.navigate('Details', { from: 'Home' })
       }}
     />
-  </View>
+  </reactNative.View>
 )
 
 Home.propTypes = {
